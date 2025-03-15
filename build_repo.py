@@ -1,5 +1,6 @@
-import tomllib;
-import csv;
+import tomllib
+import csv
+from pathlib import Path
 
 import os
 
@@ -15,9 +16,11 @@ def walk(dir_name, writer):
 
 
 if __name__ == "__main__":
-
-    with open('public/index.csv', 'w+') as index:
+    Path("public").mkdir(exist_ok=True)
+    
+    with open('public/index.csv', 'w+', newline='\n') as index:
+        print("Starting...")
         writer = csv.writer(index, quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(['type', 'platform', 'uid', 'name', 'architecture'])
         for dir in walk_dirs:
-            csv.writer.writerow(['type', 'platform', 'uid', 'name', 'architecture'])
             walk(dir, writer)
