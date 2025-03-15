@@ -30,6 +30,6 @@ jobs:
         python build_repo.py
         git config user.name github-actions
         git config user.email github-actions@github.com
-        git add .
+        git add -f './public/index.csv'
         git commit -m "Generated Index file on push"
         git push
