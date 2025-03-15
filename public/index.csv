@@ -1,0 +1,3 @@
+type,platform,uid,name,architecture
+portable,windows,portable.win.process-explorer,SysInternals Process Explorer,amd64
+portable,windows,portable.win.sumatra,Sumatra PDF Reader,amd64
