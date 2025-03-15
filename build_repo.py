@@ -15,7 +15,8 @@ def walk(dir_name, writer):
 
 
 if __name__ == "__main__":
-    with open('public/index.csv', 'w') as index:
+
+    with open('public/index.csv', 'w+') as index:
         writer = csv.writer(index, quoting=csv.QUOTE_MINIMAL)
         for dir in walk_dirs:
             csv.writer.writerow(['type', 'platform', 'uid', 'name', 'architecture'])
