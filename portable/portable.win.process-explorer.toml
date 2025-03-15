@@ -1,0 +1,24 @@
+[manifest]
+type = "portable"
+platform = "windows"
+arch = "amd64"
+name = "SysInternals Process Explorer"
+uid = "portable.win.process-explorer"
+
+[app]
+url = "https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer"
+url-type = "page"
+url-selector = ".content > p:nth-child(6) > a:nth-child(2)"
+page-version-container-selector = "#process-explorer-v1706"
+url-version-selector = "(?<version>[0-9]+\\.[0-9]+)"
+
+decompress = true
+filename = "procexp64.exe"
+
+[shortcuts]
+
+[shortcuts.windows.start-menu]
+name = "Process Explorer"
+
+[shortcuts.windows.desktop]
+name = "Process Explorer"

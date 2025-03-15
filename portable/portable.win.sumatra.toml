@@ -1,11 +1,11 @@
 [manifest]
 type = "portable"
 platform = "windows"
-compat = "10^"
+arch = "amd64"
+name = "Sumatra PDF Reader"
+uid = "portable.win.sumatra"
 
 [app]
-name = "Sumatra PDF Reader"
-
 url = "https://www.sumatrapdfreader.org/download-free-pdf-viewer"
 url-type = "page"
 url-selector = ".page-wrap > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2) > a:nth-child(1)"
